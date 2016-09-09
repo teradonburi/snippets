@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>battery</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>// デバイスとバッテリー残量の宣言
+let device: UIDevice = UIDevice.currentDevice()
+        
+// バッテリー状態の監視
+device.batteryMonitoringEnabled = true
+        
+// バッテリープロパティ
+let batteryLevel = device.batteryLevel
+let batteryState = device.batteryState
+        
+// バッテリー状態の取得
+// 0.0~1.0で残量表示。残量不明の時は-1.0を返す
+print("\(batteryLevel) %")
+switch (batteryState) {
+    case .Full:
+        print("Full")
+        break
+    case .Unplugged:
+        print("Unplugged")
+        break
+    case .Charging:
+        print("Charging")
+        break
+    case .Unknown:
+        print("Unknown")
+        break
+}
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>76A20196-32EC-422C-87A6-311F5FD851BC</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Device Battery</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Battery</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>

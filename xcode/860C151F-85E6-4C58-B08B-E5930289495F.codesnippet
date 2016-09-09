@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>window</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>All</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>let window = UIWindow(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+let viewController = UIViewController()
+viewController.view.backgroundColor = UIColor.whiteColor()
+
+window.rootViewController = viewController
+window.makeKeyAndVisible()
+
+import XCPlayground
+
+XCPlaygroundPage.currentPage.liveView = window
+XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>860C151F-85E6-4C58-B08B-E5930289495F</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetSummary</key>
+	<string>Playground Window</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Window</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>0</integer>
+</dict>
+</plist>
