@@ -3,23 +3,49 @@
 <plist version="1.0">
 <dict>
 	<key>IDECodeSnippetCompletionPrefix</key>
-	<string>window</string>
+	<string>play</string>
 	<key>IDECodeSnippetCompletionScopes</key>
 	<array>
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>let window = UIWindow(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
-let viewController = UIViewController()
-viewController.view.backgroundColor = UIColor.whiteColor()
+	<string>
+import UIKit
 
-window.rootViewController = viewController
-window.makeKeyAndVisible()
 
-import XCPlayground
+class ViewController: UIViewController {
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        
+        
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+    }
+    
+}
 
-XCPlaygroundPage.currentPage.liveView = window
-XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
+
+let viewController = ViewController()
+viewController.view.backgroundColor = UIColor.white
+
+
+import PlaygroundSupport
+
+PlaygroundPage.current.liveView = viewController
+PlaygroundPage.current.needsIndefiniteExecution = true
+
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>860C151F-85E6-4C58-B08B-E5930289495F</string>
@@ -28,10 +54,10 @@ XCPlaygroundPage.currentPage.needsIndefiniteExecution = true
 	<key>IDECodeSnippetSummary</key>
 	<string>Playground Window</string>
 	<key>IDECodeSnippetTitle</key>
-	<string>Window</string>
+	<string>playground</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

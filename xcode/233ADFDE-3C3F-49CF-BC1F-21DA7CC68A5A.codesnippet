@@ -11,7 +11,11 @@
 	<key>IDECodeSnippetContents</key>
 	<string>// 設定画面を呼び出す
 let url = NSURL(string: UIApplicationOpenSettingsURLString)
-UIApplication.sharedApplication().openURL(url!)
+if #available(iOS 10.0, *) {
+    UIApplication.shared.open(url as! URL, options: [:], completionHandler: nil)
+} else {
+    UIApplication.shared.openURL(url as! URL)
+}
 </string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>233ADFDE-3C3F-49CF-BC1F-21DA7CC68A5A</string>
@@ -24,6 +28,6 @@ UIApplication.sharedApplication().openURL(url!)
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

@@ -9,12 +9,11 @@
 		<string>All</string>
 	</array>
 	<key>IDECodeSnippetContents</key>
-	<string>// Labelを作成
-let label: UILabel = UILabel(frame:CGRectMake(0,0,100,50))
+	<string>let label: UILabel = UILabel(frame:CGRect(x:0,y:0,width:100,height:50))
 label.text = "Label"
-label.textColor = UIColor.blackColor()
-label.shadowColor = UIColor.grayColor()
-label.textAlignment = NSTextAlignment.Center
+label.textColor = UIColor.black
+label.shadowColor = UIColor.gray
+label.textAlignment = NSTextAlignment.center
 label.layer.position = CGPoint(x:label.bounds.width/2,y:label.bounds.height/2)
 
 self.view.addSubview(label)</string>
@@ -29,6 +28,6 @@ self.view.addSubview(label)</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

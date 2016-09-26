@@ -10,10 +10,10 @@
 	</array>
 	<key>IDECodeSnippetContents</key>
 	<string>// デバイスとバッテリー残量の宣言
-let device: UIDevice = UIDevice.currentDevice()
+let device: UIDevice = UIDevice.current
         
 // バッテリー状態の監視
-device.batteryMonitoringEnabled = true
+device.isBatteryMonitoringEnabled = true
         
 // バッテリープロパティ
 let batteryLevel = device.batteryLevel
@@ -23,20 +23,19 @@ let batteryState = device.batteryState
 // 0.0~1.0で残量表示。残量不明の時は-1.0を返す
 print("\(batteryLevel) %")
 switch (batteryState) {
-    case .Full:
+    case .full:
         print("Full")
         break
-    case .Unplugged:
+    case .unplugged:
         print("Unplugged")
         break
-    case .Charging:
+    case .charging:
         print("Charging")
         break
-    case .Unknown:
+    case .unknown:
         print("Unknown")
         break
-}
-</string>
+}</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>76A20196-32EC-422C-87A6-311F5FD851BC</string>
 	<key>IDECodeSnippetLanguage</key>
@@ -48,6 +47,6 @@ switch (batteryState) {
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

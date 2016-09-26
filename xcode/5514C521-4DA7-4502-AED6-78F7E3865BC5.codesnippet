@@ -11,22 +11,28 @@
 	<key>IDECodeSnippetContents</key>
 	<string>// Buttonを生成する
 let button = UIButton()
-button.frame = CGRectMake(0,0,200,40)
-button.backgroundColor = UIColor.blueColor()
+button.frame = CGRect(x:0,y:0,width:200,height:40)
+button.backgroundColor = UIColor.blue
 button.layer.masksToBounds = true
 // ボタンの状態
-button.setTitle("ボタン", forState: UIControlState.Normal)
-button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
+button.setTitle("ボタン", for: UIControlState.normal)
+button.setTitleColor(UIColor.white, for: UIControlState.normal)
 // 押された時
-button.setTitle("押されました", forState: UIControlState.Highlighted)
-button.setBackgroundImage(self.colorToImage(UIColor.orangeColor()), forState: UIControlState.Highlighted)
-button.tag = 1
+button.setTitle("押されました", for: UIControlState.highlighted)
+button.setBackgroundImage(self.colorToImage(color: UIColor.orange), for: UIControlState.highlighted)
+button.tag = 1 // ボタン識別用ID
         
 button.layer.cornerRadius = 10.0
 button.layer.position = CGPoint(x: button.bounds.width/2
             , y:button.bounds.height/2)
-        
-self.view.addSubview(button)</string>
+button.addTarget(self, action: #selector(self.onClick(_:)), for: .touchUpInside)
+self.view.addSubview(button)
+
+func onClick(_ sender: AnyObject){
+    let button = sender as! UIButton
+    print("sender.tag:\(button.tag)")
+}
+</string>
 	<key>IDECodeSnippetIdentifier</key>
 	<string>5514C521-4DA7-4502-AED6-78F7E3865BC5</string>
 	<key>IDECodeSnippetLanguage</key>
@@ -38,6 +44,6 @@ self.view.addSubview(button)</string>
 	<key>IDECodeSnippetUserSnippet</key>
 	<true/>
 	<key>IDECodeSnippetVersion</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>
